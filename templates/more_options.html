@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>fr</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:10px;">
+        <a class="navbar-brand" href="#">File Converter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" >
+            <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-item nav-link" href="https://www.qwykrtech.com/why-choose-us" target="_blank">Why Choose Us</a>
+            <a class="nav-item nav-link" href="https://www.qwykrtech.com/contact" target="_blank">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    <h1 style="font-family: Oswald, sans-serif;font-weight: bold;font-size: 3em;text-align: center;margin: 20px;">File Converter</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="padding-right:30px;padding-left:30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/audio.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Audio Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button" onclick="document.getElementById('drop_menu1').style.display='block';">Options</button>
+                            <div id="drop_menu1" style="display:none;">
+                                <a class="dropdown-item" href={{ url_for('webm_to_mp4') }}>WAV to MP3</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6" style="padding-right:30px;padding-left:30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/photo.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Image Converter</h1>
+                    <div>
+                        <div class="drop_button" style="text-align:center">
+                            <button class="btn btn-primary" aria-expanded="false" type="button" onclick="document.getElementById('drop_menu2').style.display='block';">Options</button>
+                            <div id="drop_menu2" style="display:none;">
+                                <a class="dropdown-item" href={{ url_for('png_to_jpg') }}>PNG to JPG</a>
+                                <a class="dropdown-item" href={{ url_for('webp_to_png') }}>WEBP to PNG</a>
+                                <a class="dropdown-item" href={{ url_for('webp_to_jpg') }}>WEBP to JPG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/video.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Video Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button" onclick="document.getElementById('drop_menu3').style.display='block';">Options</button>
+                            <div id="drop_menu3" style="display:none;">
+                                <a class="dropdown-item" href={{ url_for('webm_to_mp4') }}>WEBM to MP4</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/document.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Document Converter</h1>
+                    <div>
+                        <div class="drop_button" style="text-align:center">
+                            <button class="btn btn-primary" aria-expanded="false" type="button" onclick="document.getElementById('drop_menu4').style.display='block';">Options</button>
+                            <div id="drop_menu4" style="display:none;">
+                                <a class="dropdown-item" href=#>DOCX to TXT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/presentation.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Presentation Converter</h1>
+                    <div>
+                        <div class="drop_button" style="text-align:center">
+                            <button class="btn btn-primary" aria-expanded="false" type="button" onclick="document.getElementById('drop_menu8').style.display='block';">Options</button>
+                            <div id="drop_menu8" style="display:none;">
+                                <a class="dropdown-item" href=#>From to To</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/ebook.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Ebook Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button" >Comming Soon...</button>
+                            <div id="drop_menu5" style="display:none;">
+                                <a class="dropdown-item" href='#'>From to To</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/spreadsheet.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Spreadsheet Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button">Comming Soon...</button>
+                            <div id="drop_menu7" style="display:none;">
+                                <a class="dropdown-item" href=#>From to To</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/archive.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Archive Converter</h1>
+                    <div>
+                        <div class="drop_button" style="text-align:center">
+                            <button class="btn btn-primary" aria-expanded="false" type="button" >Comming Soon...</button>
+                            <div id="drop_menu6" style="display:none;">
+                                <a class="dropdown-item" href=#>ZIP to RAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/no_img.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">CAD Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button" >Comming Soon...</button>
+                            <div id="drop_menu9" style="display:none;">
+                                <a class="dropdown-item" href=#>From to To</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/no_img.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Font Converter</h1>
+                    <div>
+                        <div class="drop_button" style="text-align:center">
+                            <button class="btn btn-primary" aria-expanded="false" type="button">Comming Soon...</button>
+                            <div id="drop_menu10" style="display:none;">
+                                <a class="dropdown-item" href=#>From to To</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style=" margin-top: 40px; padding-right: 30px; padding-left: 30px;">
+                <div style="box-shadow: 2px 3px 16px 0px;border-radius: 6px; padding-bottom:10px;"><img src="static/images/no_img.jpg" style="width: 100%;">
+                    <h1 style="font-size: 2em;font-family: Oswald, sans-serif;font-weight: bold;color: var(--bs-blue);text-align: center;">Vector Converter</h1>
+                    <div class="drop_button" style="text-align:center;">
+                        <button class="btn btn-primary" aria-expanded="false" type="button">Comming Soon... </button>
+                            <div id="drop_menu11" style="display:none;">
+                                <a class="dropdown-item" href=#>From to To</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
